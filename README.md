@@ -2,7 +2,7 @@
 # Functions With Arguments - Lab
 
 ## Introduction
-In this lesson, we have decided to visit one of our travel destinations! This time we have chosen to visit Albuquerque, but we aren't very familiar with this city and are quite hungry after our long flight. We will be working with information we pulled from the Yelp database to help us find a restaurant where we can satisfy our hunger. While Yelp is great for learning about what to do in Albuquerque, it gives us back a lot of information. We'll use what we know about functions and dictionaries to format and read our data more easily. 
+In this lesson, we have decided to visit one of our travel destinations! This time we have chosen to visit Albuquerque, but we aren't very familiar with this city and are quite hungry after our long flight. We will be working with information we pulled from the Yelp database to help us find a restaurant where we can satisfy our hunger. While Yelp is great for learning about what to do in Albuquerque, it gives us back a lot of information. We'll use what we know about functions and dictionaries to format and read our data more easily.
 
 ## Objectives
 You will be able to:
@@ -128,6 +128,64 @@ restaurant_rating(frontier_restaurant) # 4.0
 restaurant_rating(fork_fig) # 4.5
 ```
 
+
+As we already know, one way to quickly view the attributes of a dictionary is to look at the keys of the dictionary.
+
+
+```python
+fork_fig.keys()
+```
+
+
+```python
+frontier_restaurant.keys()
+```
+
+
+```python
+fork_fig.keys() == frontier_restaurant.keys()
+```
+
+As we can see from our above comparison, Yelp provides us with the same information for both restaurants.  
+
+### Writing our functions
+
+Ok, now let's write our functions.  Write a function called `restaurant_name` that, provided a dictionary representing a restaurant like you saw above, returns that restaurant's name.
+
+
+```python
+def restaurant_name(restaurant):
+    pass
+```
+
+
+```python
+restaurant_name(frontier_restaurant) # 'Frontier Restaurant'
+```
+
+
+```python
+restaurant_name(fork_fig) # 'Fork & Fig'
+```
+
+Now write a function called `restaurant_rating` that returns the rating of the provided restaurant.
+
+
+```python
+def restaurant_rating(restaurant):
+    pass
+```
+
+
+```python
+restaurant_rating(frontier_restaurant) # 4.0
+```
+
+
+```python
+restaurant_rating(fork_fig) # 4.5
+```
+
 ### Comparing restaurants
 
 Now let's write a function called `is_better` that returns `True` if a restaurant has a higher rating than an alternative restaurant.  The first argument should be called `restaurant` and the second argument should be called `alternative`.  The function returns `False` if the two ratings are equal.
@@ -207,6 +265,69 @@ high_rating(fork_fig, 5) # False
 high_rating(frontier_restaurant, 4) # True
 ```
 
+Awesome! We have built out some pretty cool functions so far. Let's now think about a case where we have more than just two data points to operate on. We have added some more "restaurants" below and are going to add them to our list of restauarants. Don't worry that they have a slightly different amount of data.
+
+We are going to need a function `mean_review_count` to give us an idea what the ideal range for review_count is. This function should take in a list of restaurant dictionaries and return the mean of the review counts for the collection of restaurant dictionaries.
+
+
+```python
+dennys = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'diners', 'title': 'Diners'},
+  {'alias': 'tradamerican', 'title': 'American (Traditional)'}],
+ 'is_closed': False,
+ 'name': "Denny's",
+ 'price': '$',
+ 'rating': 3.0,
+ 'review_count': 10246}
+
+ihop = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'diners', 'title': 'Diners'},
+  {'alias': 'tradamerican', 'title': 'American (Traditional)'}],
+ 'is_closed': False,
+ 'name': "IHOP: Internation House of Pancakes",
+ 'price': '$',
+ 'rating': 3.45,
+ 'review_count': 9455}
+
+mcdonalds = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'burgers', 'title': 'Burgers'},
+  {'alias': 'fast food', 'title': 'Good Food Fast'}],
+ 'is_closed': False,
+ 'name': "McDonalds",
+ 'price': '$',
+ 'rating': 3.45,
+ 'review_count': 9455}
+
+pearl_street_oyster_bar = {'categories': [{'alias': 'seafood', 'title': 'Seafood'},
+  {'alias': 'gourmet', 'title': 'Gourmet'},
+  {'alias': 'Shellfish', 'title': 'Shellfish'}],
+ 'is_closed': False,
+ 'name': "Pear Street Oyster Bar",
+ 'price': '$$$',
+ 'rating': 4.75,
+ 'review_count': 350}
+```
+
+
+```python
+resaurant_list
+```
+
+
+```python
+# code goes here
+def mean_review_count(list_of_restaurants):
+    pass
+```
+
+Next, let's maybe look at the median review, since, we want to make sure that there isn't any outliers in our data. Ideally the median and mean will be somewhat close, but obviously this would me more accurate given a larger sample size. Define a function `median_review_count` that again takes in a list of restaurant dictionaries and returns the median count of reviews. Remember that if a data set is even, to get the median we average the two middle data points.
+
+
+```python
+# code goes here
+def median_review_count(list_of_restaurants):
+    pass
+```
 ### Summary
 
 Great! In this lab we saw how to pass both single and multiple arguments to functions.
