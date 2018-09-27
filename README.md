@@ -201,6 +201,65 @@ high_rating(fork_fig, 5) # False
 high_rating(frontier_restaurant, 4) # True
 ```
 
+Awesome! We have built out some pretty cool functions so far. Let's now think about a case where we have more than just two data points to operate on. We have added some more "restaurants" below and are going to add them to our list of restauarants. Don't worry that they have a slightly different amount of data. 
+
+We are going to need a function `mean_review_count` to give us an idea what the ideal range for review_count is. This function should take in a list of restaurant dictionaries and return the mean of the review counts for the collection of restaurant dictionaries. 
+
+
+```python
+dennys = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'diners', 'title': 'Diners'},
+  {'alias': 'tradamerican', 'title': 'American (Traditional)'}],
+ 'is_closed': False,
+ 'name': "Denny's",
+ 'price': '$',
+ 'rating': 3.0,
+ 'review_count': 10246}
+
+ihop = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'diners', 'title': 'Diners'},
+  {'alias': 'tradamerican', 'title': 'American (Traditional)'}],
+ 'is_closed': False,
+ 'name': "IHOP: Internation House of Pancakes",
+ 'price': '$',
+ 'rating': 3.45,
+ 'review_count': 9455}
+
+mcdonalds = {'categories': [{'alias': 'breakfast', 'title': 'Breakfast'},
+  {'alias': 'burgers', 'title': 'Burgers'},
+  {'alias': 'fast food', 'title': 'Good Food Fast'}],
+ 'is_closed': False,
+ 'name': "McDonalds",
+ 'price': '$',
+ 'rating': 3.45,
+ 'review_count': 9455}
+
+pearl_street_oyster_bar = {'categories': [{'alias': 'seafood', 'title': 'Seafood'},
+  {'alias': 'gourmet', 'title': 'Gourmet'},
+  {'alias': 'Shellfish', 'title': 'Shellfish'}],
+ 'is_closed': False,
+ 'name': "Pear Street Oyster Bar",
+ 'price': '$$$',
+ 'rating': 4.75,
+ 'review_count': 350}
+```
+
+
+```python
+# code goes here
+def mean_review_count(list_of_restaurants):
+    pass
+```
+
+Next, let's maybe look at the median review, since, we want to make sure that there isn't any outliers in our data. Ideally the median and mean will be somewhat close, but obviously this would me more accurate given a larger sample size. Define a function `median_review_count` that again takes in a list of restaurant dictionaries and returns the median count of reviews. Remember that if a data set is even, to get the median we average the two middle data points.
+
+
+```python
+# code goes here
+def median_review_count(list_of_restaurants):
+    pass
+```
+
 ### Summary
 
 Great! In this lab we saw how to pass both single and multiple arguments to functions.
