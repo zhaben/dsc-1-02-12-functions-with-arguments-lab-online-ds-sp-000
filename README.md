@@ -246,6 +246,11 @@ pearl_street_oyster_bar = {'categories': [{'alias': 'seafood', 'title': 'Seafood
 
 
 ```python
+resaurant_list
+```
+
+
+```python
 # code goes here
 def mean_review_count(list_of_restaurants):
     pass
