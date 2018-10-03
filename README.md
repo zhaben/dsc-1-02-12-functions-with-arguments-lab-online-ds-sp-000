@@ -97,7 +97,7 @@ Ok, now let's write our functions.  Write a function called `restaurant_name` th
 
 ```python
 def restaurant_name(restaurant):
-    return restaurant['name']
+    pass
 ```
 
 
@@ -115,7 +115,7 @@ Now write a function called `restaurant_rating` that returns the rating of the p
 
 ```python
 def restaurant_rating(restaurant):
-    return restaurant['rating']
+    pass
 ```
 
 
@@ -135,9 +135,7 @@ Now let's write a function called `is_better` that returns `True` if a restauran
 
 ```python
 def is_better(restaurant, alternative):
-    if restaurant['rating'] > alternative['rating']:
-        return True
-    return False
+    pass
 ```
 
 
@@ -162,9 +160,7 @@ Now let's write a function called `is_cheaper` that returns `True` if a restaura
 
 ```python
 def is_cheaper(restaurant, alternative):
-    if len(restaurant['price']) < len(alternative['price']):
-        return True
-    return False
+    pass
 ```
 
 
@@ -187,9 +183,7 @@ Now write a function called `high_rating` that takes a `restaurant` as a first a
 
 ```python
 def high_rating(restaurant, rating):
-    if restaurant['rating'] >= rating:
-        return True
-    return False
+    pass
 ```
 
 
@@ -259,11 +253,7 @@ restaurant_list = [pearl_street_oyster_bar, mcdonalds, ihop, dennys, fork_fig, f
 ```python
 # code goes here
 def mean_review_count(list_of_restaurants):
-    reviews = []
-    for rest in list_of_restaurants:
-        reviews.append(rest['review_count'])
-    mean = sum(reviews)/len(reviews)
-    return mean
+    pass
 ```
 
 
@@ -277,15 +267,7 @@ Next, let's maybe look at the median review, since, we want to make sure that th
 ```python
 # code goes here
 def median_review_count(list_of_restaurants):
-    length = len(list_of_restaurants)
-    if ((length % 2) == 0):
-        half = int(length/2)
-        median = (list_of_restaurants[half]['review_count'] + list_of_restaurants[half-1]['review_count'])/2
-        return median
-    else:
-        half = int((length - 1)/2)
-        median = list_of_restaurants[half]
-        return median
+    pass
 ```
 
 
