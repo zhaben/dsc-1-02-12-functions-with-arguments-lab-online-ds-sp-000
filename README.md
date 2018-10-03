@@ -295,4 +295,4 @@ median_review_count(restaurant_list)
 
 ### Summary
 
-Great! In this lab we saw how to pass both single and multiple arguments to functions.
+Great! In this lab we got practice working with functions - including passing both single and multiple arguments to them.
